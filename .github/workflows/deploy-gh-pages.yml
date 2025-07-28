@@ -20,9 +20,13 @@ jobs:
 
       - name: Install R package dependencies
         run: |
-          Rscript -e 'install.packages("remotes", repos="https://cloud.r-project.org")'
-          Rscript -e 'remotes::install_deps(dependencies = TRUE)'
-          Rscript -e 'install.packages("rmarkdown", repos="https://cloud.r-project.org")'
+          Rscript -e 'install.packages(c(
+            "rmarkdown",
+            "dplyr",      # add any other CRAN packages your dashboard uses
+            "tidyr",
+            "ggplot2",
+            "htmltools"
+          ), repos="https://cloud.r-project.org")'
 
       - name: Render site into docs/
         run: |
