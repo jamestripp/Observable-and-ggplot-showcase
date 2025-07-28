@@ -1,0 +1,11 @@
+name: "My Dashboard"
+output_dir: "docs"
+navbar:
+  title: "My Dashboard"
+  left:
+    - text: "Home"
+      href: index.html
+output:
+  html_document:
+    toc: true
+    theme: yeti
