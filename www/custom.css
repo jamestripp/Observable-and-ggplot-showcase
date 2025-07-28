@@ -1,0 +1,67 @@
+/* 80s Retro Dashboard */
+body, .wrapper, .content-wrapper, .right-side {
+  background-color: #1a1a1d !important;
+  color: #c5c6c7 !important;
+}
+
+.skin-blue .main-header .logo {
+  background-color: #0b0c10 !important;
+  color: #66fcf1 !important;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+}
+
+.skin-blue .main-header .navbar,
+.skin-blue .main-sidebar {
+  background-color: #0b0c10 !important;
+}
+
+.sidebar-menu > li.active > a,
+.sidebar-menu > li:hover > a {
+  background-color: #66fcf1 !important;
+  color: #0b0c10 !important;
+}
+
+.box {
+  border: 2px solid #45a29e !important;
+}
+
+.box-header {
+  background-color: #45a29e !important;
+  color: #0b0c10 !important;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.box-body {
+  background-color: #1f2833 !important;
+  color: #c5c6c7 !important;
+}
+
+/* Retro D3 theme */
+.d3-retro svg {
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.d3-retro .axis path,
+.d3-retro .axis line {
+  stroke: #66fcf1;
+  shape-rendering: crispEdges;
+}
+
+.d3-retro .axis text {
+  fill: #66fcf1;
+  font-size: 10px;
+}
+
+.d3-retro .grid line {
+  stroke: #ff00ff;
+  opacity: 0.6;
+  stroke-dasharray: 2 2;
+}
+
+.d3-retro circle {
+  stroke: #66fcf1;
+  stroke-width: 1px;
+  opacity: 0.8;
+}
