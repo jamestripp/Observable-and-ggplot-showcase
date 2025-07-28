@@ -1,4 +1,3 @@
-# .github/workflows/deploy-gh-pages.yml
 name: Deploy to GitHub Pages
 
 on:
@@ -21,13 +20,13 @@ jobs:
 
       - name: Install R package dependencies
         run: |
-          install.packages("remotes")
-          remotes::install_deps(dependencies = TRUE)
-          install.packages("rmarkdown")
+          Rscript -e 'install.packages("remotes", repos="https://cloud.r-project.org")'
+          Rscript -e 'remotes::install_deps(dependencies = TRUE)'
+          Rscript -e 'install.packages("rmarkdown", repos="https://cloud.r-project.org")'
 
       - name: Render site into docs/
         run: |
-          Rscript -e "rmarkdown::render_site(output_dir = 'docs')"
+          Rscript -e 'rmarkdown::render_site(output_dir = "docs")'
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
